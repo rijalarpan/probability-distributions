@@ -5,20 +5,19 @@
 
 * Overview
 
-All the material we need for the course on probability distributions.
+All the material you need for the course on probability distributions.
 
 *  Files
 
 ** Relevant for students
 
-- [[course_overview.org][Course overview]]:  all information about the course, schedule, grading, and so on
-- ~lectures/lectures.pdf~: The exercises (plus hints and solutions)  discuss during the lectures.
-- ~assigments/assignments.pdf~: the assignments.
-- ~assignments/assignments_solutions.pdf~: the solutions to the assignments.
+- =Course_overview.org:  all information about the course, schedule, grading, and so on
+- =lectures/lectures.pdf=: The exercises (plus hints and solutions)  discuss during the lectures.
+- =assigments/assignments.pdf=: the assignments.
+- =assignments/assignments_solutions.pdf=: the solutions to the assignments.
 - =assignments/assignment-answer-template.tex=:  a  basic LaTeX  document that you can use as a template for your assignments.
-- ~notes.pdf~: A set of notes on Blitzstein and Hwang, and hints (and some solutions) for the exercises in BH
-- ~discussion_board_questions.pdf~: questions (and answers) posted on the discussion board on blackboard.
-- TBD: =2021_all_exam_questions.pdf=: the questions we used to make the exam and the resit plus all solutions.
+- =notes/notes.pdf=: A set of notes on Blitzstein and Hwang, and hints (and some solutions) for the exercises in BH
+
 
 ** Irrelevant for students
 

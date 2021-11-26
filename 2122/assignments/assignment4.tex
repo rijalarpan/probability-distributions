@@ -1,0 +1,107 @@
+% arara: pdflatex: { shell: yes }
+% arara: pythontex: {verbose: yes, rerun: modified }
+% arara: pdflatex: { shell: yes }
+
+\documentclass[../../assignments/assignments]{subfiles}
+
+\begin{document}
+
+
+\section{Assignment 4}
+
+
+
+\begin{exercise}
+This is an exercise about your general insight into probability; you don't need the specific tools discussed during this week of the course.
+
+Henri Poincar\'{e} was a French mathematician who taught at the Sorbonne around 1900.
+The following anecdote about him is probably fabricated, but it makes an interesting probability problem.
+
+Supposedly Poincar\'{e}  suspected that his local bakery was selling loaves of bread that were lighter than the advertised weight of 1 kg, so every day for a year he bought a loaf of bread, brought it home and weighed it.
+At the end of the year, he plotted the distribution of his measurements and showed that it fit a normal distribution with mean 950 g and standard deviation 50 g.
+He brought this evidence to the bread police, who gave the baker a warning.
+
+For the next year, Poincar\'{e}  continued the practice of weighing his bread every day.
+At the end of the year, he found that the average weight was 1000 g, just as it should be, but again he complained to the bread police, and this time they fined the baker.
+Why?
+
+\begin{solution}
+Because the shape of the distribution was asymmetric. Unlike the normal distribution, it was skewed to the right, which is consistent with the hypothesis that the baker was still making 950 g loaves, but deliberately giving Poincar\'{e}  the heavier ones.
+
+You might like (don't feel obliged though, it's just for fun) to write a program that simulates a baker who chooses $n$ loaves from a distribution with mean 950 g and standard deviation 50 g, and gives the heaviest one to Poincar\'{e} .
+What value of $n$ yields a distribution with mean 1000 g?
+What is the standard deviation?
+
+% wk: this is very nice, but I don't think anyone will come up with this solution.
+% Maybe some people will think of saying that Poincar\'{e} got on purpose the heavier ones.
+
+\end{solution}
+\end{exercise}
+
+
+\begin{exercise}
+Use the pmf of the Beta-Binomial distribution to prove the following identity:
+\begin{equation*}
+   \sum_{k=0}^n \frac{\binom{n}{k}\binom{a+b-2}{a-1}  (a+b-1) }{\binom{a+b+n-2}{a+k-1}(a+b+n-1)} = 1.
+\end{equation*}
+for all positive integers $a, b, n$.
+\begin{solution}
+This  states that the PMF of the Beta-Binomial distribution, $$P(X=k) = \binom{n}{k} \frac{\beta(a+k,b+n-k)}{\beta(a,b)},$$ sums to 1. To see this, we have to rewrite the beta functions in terms of binomial coefficients:
+\begin{align*}
+   \frac{1}{\beta(a,b)} = \frac{\Gamma(a+b)}{\Gamma(a)\Gamma(b)} = \frac{(a+b-1)!}{(a-1)! (b-1)!} = (a+b-1) \binom{a+b-2}{a-1}, \\
+   \frac{1}{\beta(a+k,b+n-k)}  = (a+b+n-1) \binom{a+b+n-2}{a+k-1}.
+\end{align*}
+Plugging this in gives the result.
+\end{solution}
+\end{exercise}
+
+\subsubsection{Bayesian priors, Testing for rare deceases, Making the plot of Exercise 7.86}
+
+In line with Exercise 8.33, we are now going to analyze the effect on \(\P{D\given T}\) when the sensitivity is not known exactly.
+So, why is this interesting?
+In Example 2.3.9 the sensitivity is given, but in fact, in `real' experiments, this is not always known as accurately as assumed in this example.
+For example, in this paper: \href{https://www.thelancet.com/journals/lanres/article/PIIS2213-2600(20)30453-7/fulltext}{False-positive COVID-19 results: hidden problems and costs} it is claimed that `The current rate of operational false-positive swab tests in the UK is unknown; preliminary estimates show it could be somewhere between 0·8$\backslash$% and 4·0$\backslash$%.'.
+Hence, even though it is claimed that PCR tests `have analytical sensitivity and specificity of greater than 95$\backslash$%', it may be 4$\backslash$% lower.
+Simply put, the specificity and sensitivity are not precisely known, hence this must affect \(\P{D\given T}\).
+
+To help you, we show how to make one graph. Then we ask you to make a few on your own, and comment on them.
+
+
+
+
+
+\subsubsection{Redoing the  computation of the  Example 2.3.9}
+
+I write \texttt{p\_D\_g\_T\$} for \(\P{D\given T}\). Here is how this can be implemented in python.
+
+\begin{minted}[]{python}
+sensitivity = 0.95
+specificity = 0.95
+p_D = 0.01
+
+p_T = sensitivity * p_D + (1-specificity)*(1-p_D)
+p_D_g_T  = sensitivity * p_D/p_T
+p_D_g_T
+\end{minted}
+
+\begin{enumerate}
+\item Make a plot of \(\P{D\given T}\) in which you vary the sensitivity from 0.9 to 0.99. Explain what you see.
+\item Make a plot of \(\P{D\given T}\) in which you vary the specificity from 0.9 to 0.99.
+\item Make a plot of \(\P{D\given T}\) in which you vary \(\P{D}\) from 0.01 to 0.5. Explain what you see.
+\item
+\end{enumerate}
+
+
+
+\subsection{Exercise at about exam level}
+
+
+
+\subsection{Coding skills}
+
+
+
+
+\subsection{Challenges, optional}
+
+\end{document}

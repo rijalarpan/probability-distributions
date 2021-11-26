@@ -1,0 +1,12 @@
+#+title:   Probability distributions, things to be do
+#+SUBTITLE: EBP038A05: 2021-2022
+#+author: Nicky D. van Foreest
+#+date: {{{time(%Y-%m-%d)}}}
+
+*  TBD:
+
+- update course manual
+- Make planning
+- update =2021_all_exam_questions.pdf= and make available
+- merge discussion board questions with notes document
+- =2021/assignment- solutions for the challenges questions

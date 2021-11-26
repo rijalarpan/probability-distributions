@@ -1,0 +1,87 @@
+% arara: pdflatex: { shell: yes }
+% arara: pythontex: {verbose: yes, rerun: modified }
+% arara: pdflatex: { shell: yes }
+
+\documentclass[../../assignments/assignments]{subfiles}
+
+\begin{document}
+
+
+\section{Assignment 2}
+
+
+
+BELOW IS FOR NEXT YEAR
+
+\subsection{Measuring inter arrival-times}
+
+We have a device to measure the time between two arrivals, of jobs for instance, or customers in a shop, or particles in radio-active decay.
+After a measurement, the device has to recharge so it cannot measure arrivals that occur within 10 seconds from each other.
+Also, if there is no arrival within 50, it resets itself.
+Hence, the device cannot easily measure inter-arrival times longer than 1 minute. Assume that the inter-arrival times are exponentially distributed with some unknown \(\lambda\). Let \(\bar x = \sum_{n=1}^N x_{n} /N\) be the sample mean of \(N\) measured inter-arrival times.
+
+\begin{enumerate}
+\item Explain that, if \(\lambda \ll 1\) minute,  \(\hat \lambda = \bar x - 10\) is a reasonable estimator for \(\lambda\).
+\item How would you obtain a reasonable estimate of \(\lambda\) when \(\lambda\) \(\gg\) 1 minute?
+\end{enumerate}
+
+
+
+\begin{todo}
+Let $X\sim\Exp{\lambda}$ and $Y \sim N(\mu, \sigma)$, independent of $X$.
+So, draw $X$ first and let the outcome be $x$; then draw $Y\sim N(x, \sigma)$.
+Take $\lambda=4$, $\mu = 5$, $\sigma=3$.
+\begin{enumerate}
+\item Make a 3D plot of $F_{X,Y}$.
+\item Make a 3D plot of $f_{X,Y}$.
+\item Plot $f_{X}$, i.e., plot $\mu e^{-\mu t}$.
+  Then use simulation to marginalize out $Y$ from $f_{X,Y}$ to obtain $\hat f_X$; we write $\hat f_X$ because it has been obtained from simulation.
+  Plot $\hat f_X$ in the same figure as $f_X$, and compare the result.
+\item Use simulation to estimate $f_{X|Y}$. Plot this in the same graph for various values of $X=x$.
+\item Make a 3D plot of $f$
+\end{enumerate}
+\end{todo}
+
+\begin{todo}
+Let $X\sim\Exp{\lambda}$ and $Y| X \sim N(X, \sigma)$. So,  draw $X$ first and let the outcome be $x$;  then draw $Y\sim N(x, \sigma)$. Take $\lambda = 5$, $\sigma=3$.
+\begin{enumerate}
+\item Use simulation to estimate $\E Y$.
+\item Make a 3D plot of $F_{X,Y}$.
+\item Make a 3D plot of $f_{X,Y}$.
+\item Plot $f_{X}$, i.e., plot $\lambda e^{-\lambda t}$.
+  Then use simulation to marginalize out $Y$ from $f_{X,Y}$ to obtain $\hat f_X$.
+  Plot $\hat f_X$ in the same figure as $f_X$, and compare the result.
+\item Use simulation to estimate $f_{X|Y}$. Plot this in the same graph for various values of $X=x$.
+\item Make a 3D plot of $f$
+\end{enumerate}
+\end{todo}
+
+
+
+
+\subsection{Have you read well?}
+
+
+\begin{exercise}
+In your own words, explain what is
+\begin{hint}
+\end{hint}
+\begin{solution}
+\end{solution}
+\end{exercise}
+
+
+
+
+\subsection{Exercise at about exam level}
+
+
+
+\subsection{Coding skills}
+
+
+
+
+\subsection{Challenges, optional}
+
+\end{document}

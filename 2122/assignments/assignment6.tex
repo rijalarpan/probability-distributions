@@ -1,0 +1,104 @@
+% arara: pdflatex: { shell: yes }
+% arara: pythontex: {verbose: yes, rerun: modified }
+% arara: pdflatex: { shell: yes }
+
+\documentclass[../../assignments/assignments]{subfiles}
+
+\begin{document}
+
+
+\section{Assignment 6}
+
+
+\begin{exercise}
+A fair coin is tossed 100 times. We are interested in the probability that the number of heads that turn up is at most 40. What is the tightest upper bound on this probability that we can find by using Chebyshev's inequality? Hint: use a symmetry argument.
+\begin{solution}
+Let $X$ be the r.v. corresponding to the number of heads. Then $X\sim \text{Binomial}\left(100,\frac12\right)$, which has moments $\E{X} = 100 \cdot \frac{1}{2} = 50$ and $\V{X} = 100 \cdot \frac{1}{2} \cdot \frac{1}{2} = 25$. By symmetry of the $\text{Binomial}\left(100,\frac12\right)$ distribution,
+\begin{align}
+    \P{ X \leq 40} = \P{ X \geq 60 }.
+\end{align}
+Hence, using Chebyshev's inequality,
+\begin{align}
+    \P{ X \leq 40} &= \frac{1}{2}  \P{ |X - 50| \geq 10 } \\
+    &= \frac{1}{2} \P{ |X - 50| \geq 10 } \\
+    &\leq \frac{1}{2} \frac{\V{X}}{10^2} \\
+    &= \frac{1}{2} \frac{25}{100} = \frac{1}{8}.
+\end{align}
+Hence,
+\begin{align}
+    \P{ X \leq 40} &\leq \frac{1}{8}.
+\end{align}
+\end{solution}
+\end{exercise}
+
+
+\begin{exercise}
+Here is inequality from which all inequalities in BH 10.1.3 immediately follow. It's worth memorizing.
+Take any r.v. $X$ and a function $f$ that is non-negative and non-decreasing.
+\begin{enumerate}
+\item Why is this true for any $a$: $f(a) \1{X\geq a} \leq f(X) \1{X\geq a} \leq f(X)$?
+\item Take expectations in the inequality of the previous step and use the fundamental bridge to show that $\P{X\geq a} \leq \E{f(X)}/f(a)$.
+\item What part of the proof goes wrong if  $f$ can also be negative?
+\item Show that Markov's inequality follows by taking $Y=|X|$ and  $f(x)=x$. Why don't we take $f(x) = |x|$?
+\item Show that Chebyshev's inequality follows by taking $Y=|X-\mu|$ and $f(x)=x^2$.
+\item Show that Chernoff's inequality follows by taking $f(x)=e^{x}$.
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}\label{ex:13-1}
+Let the set of r.v.s $\{X_{k}, k\geq 1\}$ be the outcomes of throws of a biased coin. We take $X_{j}=1$ if the outcome is heads, and $X_{j}=0$ if tails. Suppose $\E{X_{k}} = \mu$ and $\V{X_{k}} = \sigma^{2}$.
+Let $Y_{j} = \sum_{i=n j + 1}^{(n+1)j} X_{i}/n$, i.e., $Y_{j}$ is the sample mean of the $j$ batch of throws. Since $\{Y_{j}, j\geq 1\}$ are iid, take $Y$ as the common r.v., i.e., $Y_{j} \sim Y$.
+What is a (frequentist) explanation of the statement $\P{|Y-\mu|>\epsilon} \leq \sigma^{2}/n \epsilon$?
+\begin{solution}
+  We assemble $m$ observations of $Y_{j}$ (hence, we throw the coin $n m$ times).
+  Suppose we see $M$ times that $|Y_{j} - \mu|> \epsilon$. Then we expect that $M/m < \sigma^{2}/n\epsilon$.
+
+Thus,  Chebyshev's inequality makes a statement about sample means of size $n$, say.
+\end{solution}
+\end{exercise}
+
+\begin{exercise}
+Interpret the WLLN in terms of the previous exercise.
+\begin{solution}
+  First fix some $\epsilon>0$.
+  Now take some $n$ and determine the fraction of outliers, that is, count how many of the sample means $Y_{1}=\sum_{i=1}^{n} X_{i}/n, Y_{2}=\sum_{i=n+1}^{2n} X_{i}/n, \ldots$ lie outside the interval $[\mu-\epsilon, \mu + \epsilon]$ and divide by the number of samples taken.
+  The WLLN says this: If the sample averages $Y_{1}, Y_{2}$ are taken over larger sets of the $X_{j}$, i.e., $n$ is larger so that we put more throws in a batch, then the fraction of outliers become smaller.
+\end{solution}
+\end{exercise}
+
+
+\begin{exercise}
+In the setting of~\cref{ex:13-1}, the probability of a sequence of outcomes like this: $H, T, H, T, H, T,\ldots$, i.e., a sequence in which the heads and tails alternate, has probability zero. However, $\sum_{i=1}^{n}\1{X_{i}=H}/n \to 1/2$. So, we have a sequence that occurs with probability zero, but still the average along the sequence has the proper limit. Doesn't this violate the SLLN?
+\begin{solution}
+The SLLN says nothing about individual sample paths, i.e.,  strings of outcomes like $H, T, H, T, \ldots$. In fact, the probability of obtaining any particular sample path has zero probability. Instead, the SLLN makes a statement about sets of sample paths. For the coin it says that it is virtually impossible to pick a path from the set of paths whose  long-run fraction of heads is not equal to $1/2$.
+\end{solution}
+\end{exercise}
+
+
+
+\subsection{Have you read well?}
+
+
+\begin{exercise}
+In your own words, explain what is
+\begin{hint}
+\end{hint}
+\begin{solution}
+\end{solution}
+\end{exercise}
+
+
+
+
+\subsection{Exercise at about exam level}
+
+
+
+\subsection{Coding skills}
+
+
+
+
+\subsection{Challenges, optional}
+
+\end{document}
