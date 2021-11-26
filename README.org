@@ -11,7 +11,7 @@ All the material you need for the course on probability distributions.
 
 ** Relevant for students
 
-- =Course_overview.org:  all information about the course, schedule, grading, and so on
+- =Course_overview.pdf=:  all information about the course, schedule, grading, and so on
 - =lectures/lectures.pdf=: The exercises (plus hints and solutions)  discuss during the lectures.
 - =assigments/assignments.pdf=: the assignments.
 - =assignments/assignments_solutions.pdf=: the solutions to the assignments.
@@ -21,6 +21,7 @@ All the material you need for the course on probability distributions.
 
 ** Irrelevant for students
 
+- =Course_overview.org=:  just a org mode source
 - =sources/abbreviations.sty=: abbreviations used in the tex files
 - =sources/preamble.sty=: usepackages and settings used in the tex files
 - =2021=: the sources for the assignments and the exams for academic year 2020-2021.
