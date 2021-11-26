@@ -1,0 +1,78 @@
+\usepackage{classicthesis}
+
+\usepackage[english]{babel}
+\usepackage{mathtools,amsthm,amssymb,amsmath}
+
+\usepackage{fouriernc}
+\usepackage{hyperref}
+\usepackage[capitalize]{cleveref}
+
+\usepackage{subfiles}
+
+\usepackage{pythontex}
+\setpythontexfv[]{numbers=left, frame=lines, label=\fbox{Python Code}, xleftmargin=5mm,framesep=2mm}
+
+\usepackage{minted}
+\setminted[python]{numbers=left, frame=lines, label=\fbox{Python Code}, xleftmargin=5mm,framesep=2mm,fontsize=\small}
+%\setpythontexfv[]{numbers=left, frame=lines, label=\fbox{Python Code}, xleftmargin=5mm,framesep=2mm,fontsize=\small}
+\setminted[R]{numbers=left, frame=lines, label=\fbox{R Code}, xleftmargin=5mm,framesep=2mm,fontsize=\small}
+
+
+\usepackage{comment}
+\usepackage{enumerate}
+\usepackage{xr}
+
+\usepackage{titlesec}
+\newcommand{\sectionbreak}{\clearpage}
+%\newcommand{\subsectionbreak}{\clearpage}
+
+
+\numberwithin{equation}{section}
+
+
+
+\opt{all-solutions-at-end}{
+\usepackage{answers}
+\Newassociation{solution}{Solution}{ans}
+\Newassociation{hint}{Hint}{hint}
+\renewcommand{\Hintlabel}[1]{\textbf{h.#1.}}
+\renewcommand{\Solutionlabel}[1]{\textbf{s.#1.}}
+}
+
+\opt{check}{
+\usepackage[nosolutionfiles]{answers}
+\Newassociation{solution}{Solution}{ans}
+\Newassociation{hint}{Hint}{hint}
+\renewcommand{\Hintlabel}[1]{\textbf{h.#1.}}
+\renewcommand{\Solutionlabel}[1]{\textbf{s.#1.}}
+%\AtEndEnvironment{exercise}{\clearpage} %  each exercise on a new page
+%\AtBeginEnvironment{solution}{\clearpage} %  each exercise on a new page
+}
+
+\opt{justhints}{
+\usepackage{answers}
+\Newassociation{hint}{Hint}{hint}
+\renewcommand{\Hintlabel}[1]{\textbf{h.#1.}}
+\excludecomment{solution}
+}
+
+
+
+\opt{nosolutions}{
+\excludecomment{hint}
+\excludecomment{solution}
+}
+
+
+% I don't like slanted fonts in the exercises
+\theoremstyle{definition}
+%\newtheorem{theorem}{Theorem}[section]
+\newtheorem{exercise}{Ex}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{todo}{TODO}[section]
+
+
+\crefname{equation}{}{}
+\crefformat{exercise}{[#2#1#3]}
+\crefrangeformat{exercise}{[#3#1#4] to~[#5#2#6]}
+\crefmultiformat{exercise}{[#2#1#3]}{ and~[#2#1#3]}{, [#2#1#3]}{ and~]#2#1#3]}

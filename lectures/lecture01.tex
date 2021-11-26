@@ -20,7 +20,6 @@ Let $P\in \{A, B\}$ be r.v that corresponds to the selected player, and $S\in\{0
 \begin{solution}
 Here is the joint PMF:
 \begin{align}
-  \label{}
 \P{P=A, S=1} &= \frac{1}{12}0.5 & \P{P=A, S=0} &= \frac{1}{12}0.5 \\
 \P{P=B, S=1} &= \frac{11}{12}0.7 & \P{P=B, S=0} &= \frac{11}{12}0.3.
 \end{align}
@@ -59,7 +58,6 @@ Find an expression for the PMF of $Z=X+Y$.
 \begin{solution}
 By the fundamental bridge,
 \begin{align}
-  \label{}
 \P{Z=k}
 &= \sum_{i,j} \1{i+j=k} p_{X,Y}(i,j) \\
 &= \sum_{i,j} \1{i, j \geq 0} \1{j=k-i} p_{X,Y}(i,j) \\
@@ -100,7 +98,7 @@ Are $X$ and $Y$ dependent?  If so, why, because $1=F_{X,Y}(4,4)= F_X(4)F_Y(4)$?
   The equality in the question must hold for all $i,j$, not only for $i=j=4$.
   If you take $i=j=1$, you'll see immediately that $F_{X,Y}(1,1)\neq F_X(1)F_Y(1)$:
   \begin{align}
-    \label{eq:23}
+    \label{eq:823}
     \frac{1}{4} = F_{X,Y}(1,1) \neq F_{X}(1) F_Y(1) = \frac{1}{4}\frac{1}{4}.
   \end{align}
 \end{solution}
@@ -120,7 +118,7 @@ What is $\V Z$?
 \begin{solution}
 Here is one approach
 \begin{align}
-\label{eq:3}
+\label{eq:83}
 \V Z &= \E{Z^2} - (\E Z)^{2}\\
 \E{Z^2} &= \E{(X+Y)^{2}} = \E{X^{2}} + 2\E{XY} + \E{Y^{2}} \\
 (E{Z})^{2} &= (\E X + \E Y)^{2} \\
@@ -141,7 +139,7 @@ Now take $X, Y$ iid $\sim\Unif{\{1,2,3,4\}}$ (so now no longer $p_{X,Y}(i,j) = \
 What is $\P{Z=4}$?
 \begin{solution}
 \begin{align}
-\label{eq:2}
+\label{eq:82}
 \P{Z=4}
 &= \sum_{i, j} \1{i+j=4} p_{X,Y}(i,j) \\
 &= \sum_{i=1}^4 \sum_{j=1}^{4} \1{j=4-i} \frac{1}{16} \\
@@ -208,7 +206,7 @@ The trick is to realize that $x = \int_0^{\infty} \1{y\leq x} \d y$. Using this,
 \begin{exercise}
 Explain that for a continuous r.v. $X$ with CDF $F$ and $a$ and $b$ (so it might be that $a>b$),
 \begin{equation}
-  \label{eq:7}
+  \label{eq:87}
 \P{a< X < b} = [F(b) - F(a)]^{+}.
 \end{equation}
 \begin{hint}
@@ -230,7 +228,7 @@ And, even though I(=NvF) often prefer to use figures over algebra to understand 
 
 Moreover, you should know that in fact, \emph{expectation} is the fundamental concept in probability theory, and the \emph{probability of an event is defined} as
 \begin{equation}
-  \label{eq:4}
+  \label{eq:84}
   \P{A} := \E{\1{A}}.
 \end{equation}
 Thus, the fundamental bridge is actually an application of LOTUS to indicator functions. REREAD BH.4.4!
@@ -248,7 +246,7 @@ What is $\int_{-\infty}^{\infty} \1{0\leq x \leq 3} \d x$?
 \begin{exercise}
 What is
 \begin{equation}
-\label{eq:5}
+\label{eq:85}
 \int x \1{0\leq x \leq 4} \d x?
 \end{equation}
 \begin{solution}
@@ -264,7 +262,7 @@ When we do an integral over a 2D surface we can first integrate over the $x$ and
 \begin{exercise}
 What is
 \begin{equation}
-\label{eq:5}
+\label{eq:185}
 \iint x y \1{0\leq x \leq 3}\1{0\leq y \leq 4} \d x \d y?
 \end{equation}
 \begin{solution}
@@ -280,13 +278,13 @@ What is
 \begin{exercise}
 What is
 \begin{align}
-\label{eq:5}
+\label{eq:285}
 \iint \1{0\leq x \leq 3} \1{0\leq y \leq 4}\1{x\leq y}\d x \d y?
 \end{align}
 \begin{solution}
 Two solutions. First we integrate over $y$.
 \begin{align}
-\label{eq:5}
+\label{eq:385}
 \iint \1{0\leq x \leq 3} \1{0\leq y \leq 4}\1{x\leq y}\d x \d y
 &=\int \1{0\leq x \leq 3} \int \1{0\leq y \leq 4}\1{x\leq y}\d y \d x\\
 &=\int \1{0\leq x \leq 3} \int \1{\max\{x, 0\} \leq y \leq 4}\d y \d x\\
@@ -300,7 +298,7 @@ Two solutions. First we integrate over $y$.
 
 Let's now instead first integrate over $x$.
 \begin{align}
-\label{eq:5}
+\label{eq:485}
 \iint \1{0\leq x \leq 3} \1{0\leq y \leq 4}\1{x\leq y}\d x \d y
 &= \int \1{0\leq y \leq 4} \int \1{0\leq x \leq 3} \1{x\leq y}\d x \d y\\
 &= \int_{0}^{4} \int \1{0\leq x \leq \min\{3, y\}}\d x \d y\\
@@ -317,7 +315,7 @@ Let's now instead first integrate over $x$.
 \begin{exercise}\label{ex:2}
 Take $X\sim\Unif{[1,3]}, Y\sim\Unif{[2,4]}$ and independent. Compute
 \begin{equation}
-  \label{eq:24}
+  \label{eq:824}
 \P{Y\leq 2X}.
 \end{equation}
 \begin{solution}

@@ -23,28 +23,28 @@ Since $X\sim \Exp{\lambda}$,
 \end{equation*}
 we get
 \begin{align}
-  \label{eq:25}
+  \label{eq:9925}
 \E{X|X\leq \tau}
 &= \int t f(t) \d t \\
 &= \frac{1}{1-e^{-\lambda \tau}}\int_{0}^{\tau} \lambda t e^{-\lambda t} \d t.
 \end{align}
 Simplifying,
 \begin{align}
-\label{eq:26}
+\label{eq:926}
 \int_0^{\tau} \lambda t e^{-\lambda t} \d t
 &= \left.- t e^{-\lambda t}\right|_{0}^{\tau} + \int_0^{\tau} e^{-\lambda t} \d t \\
 &= -\tau e^{-\lambda \tau} + \frac{e^{-\lambda \tau} -1}{-\lambda} \\
 &= \frac{ 1- e^{-\lambda \tau}- \tau \lambda  e^{-\lambda \tau}}{\lambda},
 \end{align}
 \begin{align}
-  \label{eq:25}
+  \label{eq:925}
 \E{X|X\leq \tau}
 &= \frac{ 1- e^{-\lambda \tau}- \tau \lambda  e^{-\lambda \tau}}{\lambda(1-e^{-\lambda \tau})}.
 \end{align}
 
 For part 2: by memorylessness, $\E{X\given X>\tau} = \tau + 1/\lambda$. Hence,
 \begin{align}
-  \label{eq:4}
+  \label{eq:94}
 \E X
 &= \E{\E{X\given Y}}, \quad \text{Adam's law} \\
 &= \E{X\given Y=1}\P{Y=1} + \E{X\given Y=0}\P{Y=0}, \quad \text{LOTE}\\
@@ -68,20 +68,18 @@ Use a conditioning argument to find the expected time $\E T$ until the station i
 \begin{solution}
 Let $X_i$ be the lifetime of machine $i$. Suppose that  the second machine does not break down before $\tau$, then
 \begin{equation}
-  \label{eq:27}
 \E{T| X_{2}>\tau} = \E{X_{1} + \tau + C |X_2>\tau} = 1/\lambda + \tau + \E T,
 \end{equation}
 because the expected time until machine 1 fails is $1/\lambda$, then we wait until it is repaired, and then, by memoryless, a new cycle $C$ starts, which has an expected duration of $\E T$.
 
 Next condition on the second machine breaking down before $\tau$. Then, since $X_{1}$ and $X_2$ are independent and by the previous exercise,
 \begin{equation}
-  \label{eq:27}
 \E{T| X_{2}\leq \tau} = \E{X_{1} + X_{2}  |X_2\leq \tau} = \frac{1}{\lambda} + \frac{ 1- e^{-\lambda \tau}- \tau \lambda  e^{-\lambda \tau}}{\lambda(1-e^{-\lambda \tau})}.
 \end{equation}
 
 By LOTE and using $\P{X_{2}\geq \tau} = e^{-\lambda \tau}$,
 \begin{align}
-  \label{eq:24}
+  \label{eq:924}
 \E T
 &=
 \E{T| X_{2}\leq \tau} \P{X_{2}\leq \tau} + \E{T| X_{2}\geq \tau} \P{X_{2}\geq \tau} \\
@@ -112,7 +110,6 @@ Find a recursion to compute the expected number $\E T$ of draws necessary to see
 Write $T_{n}$ for expected time to finish given that we have seen $n$ different balls. Thus, $\E T = T_{0}$.
 Then for $n< N$ and using conditioning and LOTE
 \begin{align}
-\label{eq:28}
 T_n
 &= 1
 +T_{n+1} \P{\text{draw a new ball}}
@@ -128,7 +125,6 @@ T_n &= \frac{N}{N-n}  +T_{n+1}.
 How about the boundary conditions, i.e., what is $T_{n}$ for $n=N$?
 That's obvious: $T_{N} = 0$. Hence,
 \begin{equation}
-\label{eq:28}
 T_{N-1} = \frac{N}{N-(N-1)} + T_{N} = N,
 \end{equation}
 and so on.
@@ -182,7 +178,7 @@ Find a recursion to compute the expected number $\E T$ of draws necessary to see
   What is the probability to draw $k$ new balls  out of the 6 we pick?
   This must be
 \begin{equation}
-\label{eq:30}
+\label{eq:930}
 {n \choose 6-k}{N-n \choose k}\big/{N \choose 6}.
 \end{equation}
 Therefore, by LOTE,

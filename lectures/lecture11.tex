@@ -17,7 +17,6 @@ As a continuation of BH.9.2.4, we now ask you to use Eve's law to compute $\V Y$
 \begin{solution}
 Recall that $\V X = 1/12$. More generally, if the stick has length $l$, then $\V X = l^{2}/12$. With this idea and using the solution of BH.9.2.4,
 \begin{align}
-  \label{}
 \E{Y\given X=x} &= x/2,\\
 \V{Y\given X=x}
 &= \E{Y^{2}\given X=x} - (\E{Y\given X=x})^{2} \\
@@ -149,7 +148,7 @@ Recall that in the stick breaking exercise, we first computed $\E{Y\given X = x}
 
 Here is the solution. Define $g$ as
 \begin{equation}
-  \label{eq:1}
+  \label{eq:111}
   g(x) =
   \begin{cases}
     \E{Y\given X=r}, & \text{if } x = r \\
@@ -158,7 +157,7 @@ Here is the solution. Define $g$ as
 \end{equation}
 But this is equal to
 \begin{equation}
-  \label{eq:2}
+  \label{eq:112}
   g(x) = \E{Y\given X=r} \1{x=r} + \E{Y\given X=b} \1{x=b}.
 \end{equation}
 
@@ -219,7 +218,7 @@ Now observe that Adam's law and LOTE are the same for discrete rvs:
 \begin{exercise}
 We have a continuous r.v. $X$ with PDF
 \begin{align}
-  \label{eq:23}
+  \label{eq:1123}
   f(x) =
   \begin{cases}
     1/2, & 0\leq x < 1, \\
@@ -238,7 +237,6 @@ Again, with this exercise we can check whether we are applying all concepts in t
 
 Using the properties of the uniform distribution,
 \begin{align}
-  \label{}
 \E X &= \frac{1}{2} \int_0^1 x \d x + \frac{1}{4} \int_1^3 x \d x = \frac{1}{4} + \frac{9-1}{8} = \frac{5}{4} \\
 \E{X^2} &=  \frac{1}{2}\int_0^{1} x^{2}\d x + \frac{1}{4}\int_1^{3} x^{2}\d x = \frac{1}{6} + \frac{27-1}{12} = \frac{7}{3} \\
 \V X &=  \frac{7}{3} - \frac{25}{16} = \frac{37}{48}.
@@ -247,7 +245,6 @@ Using the properties of the uniform distribution,
 $Y=1 \implies 0\leq X< 1$,  $Y=2 \implies 2\leq X \leq 4$.
 
 \begin{align}
-  \label{}
 \E{X\given Y=1} &= 1/2, \\
 \E{X\given Y=2} &= 2, \\
 g(y) &= \E{X\given Y=1}\1{y=1} + \E{X\given Y=2}\1{y=2}\\

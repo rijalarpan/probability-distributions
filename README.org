@@ -3,22 +3,26 @@
 #+author: Nicky D. van Foreest
 #+date: {{{time(%Y-%m-%d)}}}
 
-* Relevant information
+* Overview
+
+All the material we need for the course on probability distributions.
+
+*  Files
+
+** Relevant for students
+
 - [[course_overview.org][Course overview]]:  all information about the course, schedule, grading, and so on
-- ~lectures-questions.pdf~: The exercises we discuss during the lectures. We make this available one or two days before the lecture.
-- ~lectures-questions-solutions.pdf~: The exercises and the solutions we discuss during the lectures. The updates become available  after the lecture.
-- ~memoryless_excursions.pdf~: exercises on joint probability distributions and  exponential and geometric r.v.s.
-- ~assignments.pdf~: the assignments.
-- ~assignments_solutions.pdf~: the solutions to the assignments.
+- ~lectures/lectures.pdf~: The exercises (plus hints and solutions)  discuss during the lectures.
+- ~assigments/assignments.pdf~: the assignments.
+- ~assignments/assignments_solutions.pdf~: the solutions to the assignments.
+- =assignments/assignment-answer-template.tex=:  a  basic LaTeX  document that you can use as a template for your assignments.
 - ~notes.pdf~: A set of notes on Blitzstein and Hwang, and hints (and some solutions) for the exercises in BH
 - ~discussion_board_questions.pdf~: questions (and answers) posted on the discussion board on blackboard.
-- =sources/assignment-answer-template.tex=:  a  basic LaTeX  document that you can use as a template for your assignments.
-- =2021_all_exam_questions.pdf=: the questions we used to make the exam and the resit plus all solutions.
+- TBD: =2021_all_exam_questions.pdf=: the questions we used to make the exam and the resit plus all solutions.
 
+** Irrelevant for students
 
-
-
-* Irrelevant files
-
-- ~lectures-demo.pdf~: A practical format to present the material during the lectures. Hence, only relevant for the lectures.
-- ~sources~: all LaTeX sources
+- =sources/abbreviations.sty=: abbreviations used in the tex files
+- =sources/preamble.sty=: usepackages and settings used in the tex files
+- =2021=: the sources for the assignments and the exams for academic year 2020-2021.
+- =2122=: the sources for the assignments for academic year 2021-2022.

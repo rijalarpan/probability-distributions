@@ -7,14 +7,13 @@
 \begin{exercise}
 At the end of Story 2 of Bayes' billiards (BH.8.3.2) there is the expression
 \begin{equation}
-\label{eq:2}
+\label{eq:72}
 \beta(a,b) = \frac{(a-1)!(b-1)!}{(a+b-1)!}.
 \end{equation}
 Derive this equation.
 \begin{solution}
 We have by the Bayes' billiard stories that
 \begin{align}
-  \label{}
 {n \choose k} \int_0^1 p^k(1-p)^{n-k}\d p = \frac{1}{n+1},
 \end{align}
 but the integral is equal to $\beta(k+1, n-k+1)$ by the definition of the $\beta$ function. Hence,
@@ -43,7 +42,7 @@ Before trying to answer this question, look up the details of the negative hyper
 
 Conditional on the position of the pivot being $p$, we must have that
 \begin{equation}
-\label{eq:3}
+\label{eq:73}
 \P{X=k} = w \int_0^1{b \choose k} p^k(1-p)^{b-k} \times {w -1 \choose r-1}p^{r-1} (1-p)^{w-r} \d p.
 \end{equation}
 To see this, reason as follows.
@@ -54,7 +53,6 @@ Then, of the $w-1$ remaining white balls, $r-1$ also have to lie the left of the
 
 With the definition of the  $\beta$ function, we can simplify to this:
 \begin{align}
-\label{eq:3}
 \P{X=k}
 &= w{b \choose k} {w -1 \choose r-1}  \int_0^1 p^{k+r-1}(1-p)^{b-k+w-r} \d p \\
 &= w{b \choose k} {w -1 \choose r-1}  \beta(k+r, b-k+w-r + 1)\\
@@ -74,7 +72,7 @@ And we have to multiply by the number of combinations to select $r-1$ of the $w$
 
 Next, with a some algebra---here we do the work, but the books just say `after a bit of algebra we find', and then it is left to you to do the algebra---,
 \begin{align}
-\label{eq:17}
+\label{eq:717}
 \P{X=k}
 &= \frac{{w \choose r-1}{b \choose k}}{{w+b \choose r+k -1}}\frac{w-r+1}{w+b-r-k+1} \\
 &= {w \choose r-1}{b \choose k} \frac{(r+k-1)!(w+b-r-k+1)!}{(w+b)!}\frac{w-r+1}{w+b-r-k+1} \\
@@ -89,7 +87,7 @@ where we use that
 
 The results for the Bayes' billiards match with those of the negative hypergeometric distribution!
 
-So, inspecting~\cref{eq:3} we see that the $a$ and $b$ parameters in the $\beta$ distribution for the prior $f(p)$ are such that $a=r$ and $b=w-r+1$.
+So, inspecting~\cref{eq:73} we see that the $a$ and $b$ parameters in the $\beta$ distribution for the prior $f(p)$ are such that $a=r$ and $b=w-r+1$.
 (Don't confuse the $b$ here with the number of black balls.
 I took the $b$ to stick to the notation of the book.)
 In other words, the $a$ corresponds to the white ball we mark as the pivot, and $b$ to the remaining number of white balls (plus 1).
@@ -122,7 +120,7 @@ n-1 = T(n) = T(k) + T(m) + 1 = k-1 + m-1 + 1 = k+m-1 = n-1.
 Use recursion to find the expected number $X$ of black balls drawn without replacement at random from an urn containing $w\geq 1$ white balls and $b$ black balls before we draw 1 white ball.
 In other words, I ask to use recursion to compute $\E X$ for $X$ a negative hypergeometric distribution with parameters $w,b, r=1$ and show that
 \begin{align}
-  \label{eq:27}
+  \label{eq:727}
 \E X = \frac{b}{w+1}
 \end{align}
 \begin{hint}
@@ -185,7 +183,7 @@ Using this in the recursion,
 &= \frac{w}{w+b} \frac{b }{w} +  \frac{b}{w+b} (1+N_{2}(w, b-1)) \\
 &=  \frac{b}{w+b} (2+N_{2}(w, b-1)).
 \end{align*}
-But this has the same form as~\cref{eq:27}, except that the 1 has been replaced by a 2. But, now we are dealing with the case $r=2$ instead of $r=1$. Hence, by the same token,
+But this has the same form as~\cref{eq:727}, except that the 1 has been replaced by a 2. But, now we are dealing with the case $r=2$ instead of $r=1$. Hence, by the same token,
 \begin{equation*}
   N_2(w,b) = 2 \frac{b}{w+1}
 \end{equation*}

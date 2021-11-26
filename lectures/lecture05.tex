@@ -43,51 +43,51 @@ Show that the disturbance along the $x$-axis (hence $y$-axis) is normally distri
 Since the disturbance $(x,y)$ has the same distribution in any direction, it has in particular the same distribution in the $x$ and $y$ direction.
 From this and property 2 we conclude that the joint PDF of the disturbance $(x,y)$ must satisfy
 \begin{equation}
-  \label{eq:1}
+  \label{eq:051}
   f_{X,Y}(x,y) = f_X(x)f_Y(x) =: f(x)f(y),
 \end{equation}
 where we use property 2 first and then property 1, and we write $f(x)$ for ease.
 Since the disturbance has the same distribution in \textit{any} direction, the density $f$ can only depend on the distance $r$ from the origin but not on the angle. Therefore, the probability that the dart lands on some square $\d x\d y$ must be such that
 \begin{equation}
-  \label{eq:4}
+  \label{eq:054}
   f(x)f(y) \d x \d y = g(r) \d x \d y,
 \end{equation}
 for some function $g$, hence $g(r) = f(x)f(y)$. But since $g$ does not depend on the angle $\phi$,
 \begin{equation}
-\label{eq:5}
+\label{eq:055}
 \partial_{\phi} g(r) = 0 = f(x) \partial_{\phi}f(y) + f(y) \partial_{\phi}f(x).
 \end{equation}
 
 What can we about $\partial_{\phi} f(x)$ and $\partial_{\phi}f(y)$?
 The relation between $x$ and $y$ and $r$ and $\phi$ is given by the relations:
 \begin{align}
-\label{eq:6}
+\label{eq:056}
 x &= r \cos \phi, & y&=r\sin \phi.
 \end{align}
 Using the chain rule,
 \begin{align}
-  \label{eq:7}
+  \label{eq:057}
   \partial_{\phi} f(x) &= \partial_{x} f(x) \frac{\d x}{\d \phi} = f'(x) r (-\sin \phi) = - f'(x) y, \\
   \partial_{\phi} f(y) &= \partial_{y} f(y) \frac{\d y}{\d \phi} = f'(y) r \cos \phi =  f'(y) x.
 \end{align}
-All this gives for \cref{eq:5}
+All this gives for \cref{eq:055}
 \begin{equation}
-\label{eq:8}
+\label{eq:058}
 0 = x f(x) f'(y) - y f(y)f'(x).
 \end{equation}
 Simplifying,
 \begin{equation}
-  \label{eq:9}
+  \label{eq:059}
    \frac{f'(x)}{x f(x)} = \frac{f'(y)}{ y f(y)}.
 \end{equation}
 But now notice that must hold for all $x$ and $y$ at the same time. The only possibility is that there is some constant $\alpha$ such that
 \begin{equation}
-\label{eq:10}
+\label{eq:0510}
    \frac{f'(x)}{x f(x)} =  \frac{f'(y)}{y f(y)} = \alpha.
 \end{equation}
 Hence, our $f$ must satisfy for all $x$
 \begin{equation}
-\label{eq:11}
+\label{eq:0511}
 f'(x) = \alpha x f(x).
 \end{equation}
 Differentiating the guess $f(x) = a e^{ x^2/{2 \alpha}}$, for some constant $a$, shows that this $f$ satisfies this differential equation.
@@ -97,7 +97,7 @@ Finally, by the third property, we want that $f$ decays as $x$ increases, so tha
 
 We set $\alpha = -1/2\sigma^{2}$ to get the final answer:
 \begin{equation}
-  \label{eq:12}
+  \label{eq:0512}
   f(x) = a e^{-x^{2}/2 \sigma^{2}}.
 \end{equation}
 It remains to find the normalization constant $a$; recall, $f$ must be a PDF. This is the topic of the next exercise.
@@ -111,7 +111,7 @@ For this purpose consider two circles in the plane: $C(N)$ with radius $N$ and $
 It is obvious that the square $S(N) = [-N,N]\times[-N,N]$ contains the first circle, and is contained in the second.
 Therefore,
 \begin{equation}
-  \label{eq:13}
+  \label{eq:0513}
   \iint_{C(N)}f_{X,Y}(x,y) \d x\d y \leq
   \iint_{S(N)}f_{X,Y}(x,y) \d x\d y \leq
   \iint_{C(\sqrt 2 N)}f_{X,Y}(x,y) \d x\d y.
@@ -120,13 +120,13 @@ Now substitute the normal distribution of~\cref{ex:1}.
 Then use polar coordinates (See BH.8.1.9) to solve the integrals over the circles, and derive the normalization constant.
 \begin{solution}
 \begin{equation}
-\label{eq:14}
+\label{eq:0514}
   \iint_{C(N)}f_{X,Y}(x,y) \d x\d y =
 a^{2}  \iint_{C(N)} e^{-(x^{2}+y^{2})/2\sigma} \d x\d y.
 \end{equation}
 Since  $x = r \cos \phi$ and $y=r\sin \phi$, we get that $x^2+y^2 = r^{2}$. For the Jacobian,
 \begin{equation}
-  \label{eq:15}
+  \label{eq:0515}
   \frac{\partial(x, y)}{\partial(r,\phi)} =
   \begin{vmatrix}
     \cos \phi  & -r\sin \phi \\
@@ -136,7 +136,7 @@ Since  $x = r \cos \phi$ and $y=r\sin \phi$, we get that $x^2+y^2 = r^{2}$. For 
 \end{equation}
 Therefore
 \begin{equation}
-\label{eq:16}
+\label{eq:0516}
 \d x \d y = r \d r \d \phi,
 \end{equation}
 from which
@@ -148,7 +148,7 @@ a^{2}  \iint_{C(N)} e^{-(x^{2}+y^{2})/2\sigma} \d x\d y
 &= - a^{2}  2\pi{\sigma^{2}} e^{-r^{2}/2\sigma^{2}}\biggr|_{0}^{N} \\
 &= a^{2}2\pi{\sigma^{2}} (1-e^{-N^{2}/2\sigma^{2}}),
 \end{align}
-where we use~\cref{eq:11}.
+where we use~\cref{eq:0511}.
 
 
 Therefore, for the square,
@@ -167,7 +167,7 @@ a^{2}2\pi{\sigma^{2}}
 \end{align}
 and therefore
 \begin{equation}
-\label{eq:18}
+\label{eq:0518}
 \int_{-\infty}^{\infty }e^{-x^{2}/2\sigma^{2}} \d x = \sqrt{2 \pi}\sigma.
 \end{equation}
 \end{solution}
@@ -188,7 +188,7 @@ Let $g(x,y) = (x, z) = (x, x y)$, i.e., we take $z=x y$. It is simple to see tha
 
 We use the mnemonic
 \begin{equation}
-\label{eq:20}
+\label{eq:0520}
 f_{X,Z}(x,z) \d x \d z =
 f_{X,Y}(x,y) \d x \d y
 \end{equation}
@@ -198,7 +198,7 @@ f_{X,Z}(x,z)  = f_{X,Y}(x,y) \frac{\partial(x,y)}{\partial(x, z)}.
 \end{equation}
 Now (I take this form because I find it easier to differentiate in this sequence),
 \begin{equation}
-\label{eq:19}
+\label{eq:0519}
 \left(\frac{\partial(x,y)}{\partial(x,z)}\right)^{-1} =
 \frac{\partial(x,z)}{\partial(x,y)} =
 \begin{vmatrix}
@@ -219,7 +219,7 @@ Hence, the domain is not $(x,z) \in [1,10]\times [1, 100]$, but more complicated
 
 We already have that $1\leq x < 10$. We also have the condition $z/x = y\in [1, 10)$, which we can simplify to a condition on $x$,
 \begin{equation}
-\label{eq:22}
+\label{eq:0522}
 1\leq z/x < 10 \iff 1 \geq x/z > 1/10 \iff z \geq x > z/10.
 \end{equation}
 Combining both constraints gives
@@ -237,7 +237,6 @@ I advice you to make a sketch of the support of $X$ and $Z$.
 
 With marginalization
 \begin{equation}
-  \label{eq:21}
 f_{Z}(z) =
 \int_{1}^{10} f_{X,Z}(x,z) \d x.
 \end{equation}
@@ -245,7 +244,6 @@ We can plug in the above expression, but that just results in a longer expressio
 
 Finally, if $X,Y$ uniform on $[1,10)$, then $f(x)=1/9$, hence,
 \begin{align}
-  \label{eq:21}
 f_{Z}(z)
 &=\frac{1}{9^{2}}\int_{1}^{10}  \1{\max\{1, z/10\}< x \leq \min\{10, z\}} \frac{\d x}{x}\\
 &=\frac{\log(\min\{10, z\}) - \log(\max\{1, z/10\})}{81} \1{1\leq z < 100}.
