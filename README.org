@@ -1,0 +1,24 @@
+#+title:   Probability distributions
+#+SUBTITLE: EBP038A05, 2020-2021
+#+author: Nicky D. van Foreest
+#+date: {{{time(%Y-%m-%d)}}}
+
+* Relevant information
+- [[course_overview.org][Course overview]]:  all information about the course, schedule, grading, and so on
+- ~lectures-questions.pdf~: The exercises we discuss during the lectures. We make this available one or two days before the lecture.
+- ~lectures-questions-solutions.pdf~: The exercises and the solutions we discuss during the lectures. The updates become available  after the lecture.
+- ~memoryless_excursions.pdf~: exercises on joint probability distributions and  exponential and geometric r.v.s.
+- ~assignments.pdf~: the assignments.
+- ~assignments_solutions.pdf~: the solutions to the assignments.
+- ~notes.pdf~: A set of notes on Blitzstein and Hwang, and hints (and some solutions) for the exercises in BH
+- ~discussion_board_questions.pdf~: questions (and answers) posted on the discussion board on blackboard.
+- =sources/assignment-answer-template.tex=:  a  basic LaTeX  document that you can use as a template for your assignments.
+- =2021_all_exam_questions.pdf=: the questions we used to make the exam and the resit plus all solutions.
+
+
+
+
+* Irrelevant files
+
+- ~lectures-demo.pdf~: A practical format to present the material during the lectures. Hence, only relevant for the lectures.
+- ~sources~: all LaTeX sources
