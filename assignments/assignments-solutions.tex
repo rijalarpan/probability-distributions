@@ -1,0 +1,35 @@
+% arara: pdflatex: { shell: yes }
+% arara: pythontex: {verbose: yes, rerun: modified }
+% arara: pdflatex: { shell: yes }
+
+
+\documentclass[a4paper,12pt]{book}
+
+
+%\usepackage[nosolutions]{optional}
+%\usepackage[justhints]{optional}
+%\usepackage[check]{optional}
+\usepackage[all-solutions-at-end]{optional}
+
+\input{header.tex}
+
+\begin{document}
+
+\subfile{assignments-core.tex}
+
+
+\opt{all-solutions-at-end}{
+\Closesolutionfile{hint}
+\Closesolutionfile{ans}
+\clearpage
+\chapter{Hints}
+\input{hint}
+\clearpage
+\chapter{Solutions}
+Compare  your answers very carefully against ours. You should spend time thinking about the definition and notation we use. For instance, there is conceptual huge difference between $X$ and $x$. More generally, good notation and good understanding correlate (positively).
+
+\input{ans}
+}
+
+
+\end{document}

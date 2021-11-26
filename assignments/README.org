@@ -1,0 +1,10 @@
+#+title:   Probability distributions, assignments
+#+SUBTITLE: EBP038A05, 2020-2021
+#+author: Nicky D. van Foreest
+#+date: {{{time(%Y-%m-%d)}}}
+
+* Files overview
+1. ~assignments.pdf~ :  Questions and hints for the assignments
+2. ~assignments_solutions.pdf~ :  The assigments plus hints and solutions. This file will not contain the solutions for the assignment in which the assignment is released. After the due date of the assignment and grading it, we update this file with the solutions.
+3. ~assignment-answer-template.tex~: a tex file that you have to use to hand in your assignment.
+4. The LaTeX sources for the assignments can be found in the corresponding year directory.

@@ -1,0 +1,161 @@
+% arara: pdflatex: { shell: yes }
+% arara: pythontex: {verbose: yes, rerun: modified }
+% arara: pdflatex: { shell: yes }
+
+\documentclass[../../assignments/assignments]{subfiles}
+
+\begin{document}
+
+
+\section{Assignment 1}
+
+
+\subsection{TODO for another year}
+
+Here are some ideas for another time. You can neglect this.
+
+
+
+\begin{exercise}
+We throw an unbiased die with six sides; the result of the $i$th throw is $X_i$.
+\begin{enumerate}
+\item What is the sample space of the two throws $(X_{1}, X_2)$?
+\item What is the joint CDF?
+\item What is the joint PMF?
+\item  Marginalize out $X_2$ to show that $\P{X_1=5} = 1/6$.
+\item Use the fundamental bridge and indicators to compute $\P{X_1>X_2}$.
+\item Use the fundamental bridge and indicators to compute $\P{|X_1-X_2| < 1 } = 1/6$.
+\item Use the fundamental bridge and indicators to compute $\P{|X_1-X_2|\leq 1 }$.
+\item How would you use simulation to estimate  $\P{|X_1-X_2|\leq 1 }$?
+\end{enumerate}
+\end{exercise}
+
+\begin{exercise}
+We select a random married couple (a man and a woman). His height is $X\sim \Norm{1.8, 0.1}$, her height is $Y\sim \Norm{1.7, 0.08}$ in meters.
+\begin{enumerate}
+\item What is the sample space of $(X, Y)$?
+\item If your answer to question 1 is correct, you must have noticed that potentially the height of the man and the woman can be negative. Is this a problem for this model?
+\item What is the joint CDF?
+\item What is the joint PDF?
+\item  Marginalize out $Y$ to show that $X\sim \Norm{1.8, 0.1}$.
+\item Use the fundamental bridge and indicators to write  $\P{X>Y}$ as an integral. You don't have to solve the integral.
+\item Use the fundamental bridge and indicators to write  $\P{|X-Y| < 0.1 }$ as an integral. You don't have to solve the integral.
+\end{enumerate}
+\end{exercise}
+
+
+\subsection{Read well}
+
+
+\begin{exercise}\label{ex:ab}
+Alice and  Bob plan to meet for a lunch walk. They arrive uniformly distributed between 12h and 13h. Each is prepared to wait for 15 minutes for the other.  Sketch a 2D area that corresponds to Alice and Bob meeting.
+\begin{hint}
+\end{hint}
+\begin{solution}
+\end{solution}
+\end{exercise}
+
+\begin{exercise}
+Write an integral by which you can compute the probability that Alice and Bob meet.
+\begin{hint}
+\end{hint}
+\begin{solution}
+\end{solution}
+\end{exercise}
+
+\begin{exercise}
+What is the probability that the meet (i.e., solve the integral by hand).
+\begin{hint}
+\end{hint}
+\begin{solution}
+\end{solution}
+\end{exercise}
+
+\begin{exercise}
+Evaluate numerically with \pyv{scipy.integrate.quad} the integral to compute the probability that the meet.
+
+\begin{hint}
+\end{hint}
+\begin{solution}
+\end{solution}
+\end{exercise}
+
+
+\begin{exercise}
+Contrary to~\cref{ex:ab} suppose Bob is not prepared to wait longer than 5 minutes, while Alice is still prepared to wait for 15 minutes. Write down the integral that corresponds to the proability that they meet, and solve it numerically.
+\begin{hint}
+\end{hint}
+\begin{solution}
+\end{solution}
+\end{exercise}
+
+\begin{exercise}
+Contrary to~\cref{ex:ab} suppose Bob is prepared to wait for 20 minutes when he arrives before 1230, but just 10 when he arrives after 1230, while Alice is still prepared to wait for 15 minutes. Write down the integral that corresponds to the proability that they meet, and solve it numerically.
+\begin{hint}
+\end{hint}
+\begin{solution}
+\end{solution}
+\end{exercise}
+
+\begin{exercise}
+Contrary to~\cref{ex:ab} suppose Bob is prepared to wait $15 - (13-t)/4$ minutes when he arrives at $t\in [12, 13]$, while Alice is still prepared to wait for 15 minutes. Sketch the area, write down the integral that corresponds to the proability that they meet, and solve it numerically.
+\begin{hint}
+\end{hint}
+\begin{solution}
+\end{solution}
+\end{exercise}
+
+\begin{exercise}
+Contrary to~\cref{ex:ab} suppose Bob's arrival time is $\Exp{\lambda}$ with $\lambda=1/2$,  while Alice's arrival time is still uniform.
+Write down the integral that corresponds to the proability that they meet, and solve it numerically.
+\begin{hint}
+\end{hint}
+\begin{solution}
+\end{solution}
+\end{exercise}
+
+
+
+
+
+\begin{exercise}
+In your own words, explain what is
+\begin{hint}
+\end{hint}
+\begin{solution}
+\end{solution}
+\end{exercise}
+
+
+
+
+\subsection{Exercise at about exam level}
+
+
+
+\subsection{Coding skills}
+
+
+\subsection{Challenges, optional}
+
+\subsection{Refection}
+\label{sec:refection}
+
+\begin{exercise}
+Summarize what you learned from this assignment.
+\begin{hint}
+\end{hint}
+\begin{solution}
+\end{solution}
+\end{exercise}
+
+\begin{exercise}
+Find an real-life example/problem on the web to which you can apply the tools you learned from this assignment. You don't have to solve that example, but just sketch the main ideas on how you would approach the problem.
+\begin{hint}
+\end{hint}
+\begin{solution}
+\end{solution}
+\end{exercise}
+
+
+\end{document}
